@@ -4,27 +4,29 @@
     <div class="btn">C</div>
     <div class="btn">+/-</div>
     <div class="btn">%</div>
-    <div class="btn">/</div>
+    <div class="btn operator">/</div>
     <div class="btn">7</div>
     <div class="btn">8</div>
     <div class="btn">9</div>
-    <div class="btn">*</div>
+    <div class="btn operator">*</div>
     <div class="btn">4</div>
     <div class="btn">5</div>
     <div class="btn">6</div>
-    <div class="btn">-</div>
+    <div class="btn operator">-</div>
     <div class="btn">1</div>
     <div class="btn">2</div>
     <div class="btn">3</div>
-    <div class="btn">+</div>
+    <div class="btn operator">+</div>
     <div class="zero btn">0</div>
     <div class="btn">.</div>
-    <div class="btn">=</div>
+    <div class="btn operator" operator>=</div>
   </div>
 </template>
 
 <style scoped>
 .calculator {
+  margin: 0 auto;
+  width: 500px;
   font-size: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -33,7 +35,8 @@
 
 .display {
   grid-column: 1/5;
-  background-color: red;
+  background-color: grey;
+  color: #000;
 }
 
 .zero {
@@ -41,6 +44,11 @@
 }
 .btn {
   background-color: #eeee;
-  border: 1px solid #333;
+  border: 1px solid #999;
+}
+
+.operator {
+  background-color: orange;
+  color: white;
 }
 </style>
