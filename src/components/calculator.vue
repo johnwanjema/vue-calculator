@@ -1,28 +1,3 @@
-<template>
-  <div class="calculator">
-    <div class="display">1243</div>
-    <div class="btn">C</div>
-    <div class="btn">+/-</div>
-    <div class="btn">%</div>
-    <div class="btn operator">/</div>
-    <div class="btn">7</div>
-    <div class="btn">8</div>
-    <div class="btn">9</div>
-    <div class="btn operator">*</div>
-    <div class="btn">4</div>
-    <div class="btn">5</div>
-    <div class="btn">6</div>
-    <div class="btn operator">-</div>
-    <div class="btn">1</div>
-    <div class="btn">2</div>
-    <div class="btn">3</div>
-    <div class="btn operator">+</div>
-    <div class="zero btn">0</div>
-    <div class="btn">.</div>
-    <div class="btn operator" operator>=</div>
-  </div>
-</template>
-
 <style scoped>
 .calculator {
   margin: 0 auto;
@@ -52,3 +27,45 @@
   color: white;
 }
 </style>
+
+
+<template>
+  <div class="calculator">
+    <div class="display">{{current || '0'}}</div>
+    <div @click="clear" class="btn">C</div>
+    <div class="btn">+/-</div>
+    <div class="btn">%</div>
+    <div class="btn operator">/</div>
+    <div class="btn">7</div>
+    <div class="btn">8</div>
+    <div class="btn">9</div>
+    <div class="btn operator">*</div>
+    <div class="btn">4</div>
+    <div class="btn">5</div>
+    <div class="btn">6</div>
+    <div class="btn operator">-</div>
+    <div class="btn">1</div>
+    <div class="btn">2</div>
+    <div class="btn">3</div>
+    <div class="btn operator">+</div>
+    <div class="zero btn">0</div>
+    <div class="btn">.</div>
+    <div class="btn operator" operator>=</div>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return{
+      current:'123',
+    }
+  },
+  methods:{
+      clear(){
+        this.current = '';
+      }
+  }
+}
+</script>
+
