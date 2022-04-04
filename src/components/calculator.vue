@@ -1,27 +1,25 @@
 <style scoped>
 .calculator {
+  cursor: pointer;
   margin: 0 auto;
-  width: 500px;
-  font-size: 20px;
+  width: 450px;
+  font-size: 40px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: minmax(50px, auto);
 }
-
 .display {
-  grid-column: 1/5;
-  background-color: grey;
-  color: #000;
+  grid-column: 1 / 5;
+  background-color: #333;
+  color: white;
 }
-
 .zero {
-  grid-column: 1/3;
+  grid-column: 1 / 3;
 }
 .btn {
-  background-color: #eeee;
+  background-color: #F2F2F2;
   border: 1px solid #999;
 }
-
 .operator {
   background-color: orange;
   color: white;
